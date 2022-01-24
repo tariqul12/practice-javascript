@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">How old are You ? <input type="number" id="age"></label>
+    <button type="button" id="btn">submit</button>
+    <br><br>
+    <br>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click",()=>{
+            var age=document.getElementById('age').value;
+            if(age>18){
+                alert("User is enough to enter");
+            }
+            else{
+                alert("User is not enough to enter")
+            }
+        });
+        const x =5;
+        if(x<10){
+            document.getElementById("demo").innerHTML = "x is less then 10";
+        }
+        else if(x>10){
+            document.getElementById("demo").innerHTML = "x is more then 10";
+        }
+        else{
+            document.getElementById("demo").innerHTML = "x is 10 because it,s neither less than or more than 10";
+        }
+
+    </script>
+</body>
+</html>

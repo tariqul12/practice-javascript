@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo3{
+            font-size: 50px;
+        }
+        .btn{
+            padding: 10px 12px;
+            border: none;
+            background-color:brown;
+            color:white;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+    <br> <br>
+    <p id="demo2"></p>
+    <br> <br>
+    <p id="demo3">10</p>
+    <button onclick="stopInterval()" class="btn">Stop This program</button>
+    <br> <br>
+    <script>
+        function greetUser(){
+            var time= new Date().getHours();
+            if(time < 11){
+                return "Good Morning";
+            }
+            else if(time < 18){
+                return "Good Day";
+            }
+            else{
+                return "Good Evening";
+            }
+        }
+        document.getElementById("demo").innerHTML=greetUser();
+        const fruit = "Mango"
+        if(fruit == "Apple"){
+            document.write("The color is red");
+        }
+         if(fruit == "Strawberry"){
+            document.write("The color is pink")
+        }
+        else{
+            document.write("The color is Yellow" + "<br>");
+        }
+        const city = "Dhaka";
+                switch(city){
+                case "washington, D.C.":
+                    document.write("It is the federal capital city of the United States.");
+
+                    break;
+                    case "Mumbai":
+                        document.write("It is the capital city of India.");
+                        break;
+                        case "Dhaka":
+                            document.write("It is the capital city of Bangladesh" + "<br>");
+                            break;
+                }
+        const friend = "Berlin";
+        switch(friend){
+            case "Rio":
+                document.write("He is a Heaker of the gang");
+            case " Tokio":
+                document.write("He is a killer of the gang");
+            case "Berlin":
+                document.write ( "He is a genius of the gang.")
+        }
+        var x= 10;
+        var myInterval = setInterval(function(){
+            x += 10;
+            document.getElementById("demo3").innerHTML = "<b>" + x +"</b>";
+        },1000);
+        function stopInterval(){
+            clearInterval(myInterval);
+        }
+
+    </script>
+</body>
+</html>

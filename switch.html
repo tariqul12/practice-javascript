@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Choose a fruits 
+        <select onchange="checkPrice()" id="fruits">
+            <option value="apple"> apple </option>
+            <option value="banana"> banana </option>
+            <option value="cherry"> cherry </option>
+            <option value="mango"> mango </option>
+            <option value="orange"> orange </option>
+            <option value="strawberry"> strawberry </option>
+
+        </select>
+    </label>
+    <p id="price"></p>
+    <p id="demo"></p>
+    <script>
+        function checkPrice() {
+            var fruit = document.getElementById("fruits").value;
+            console.log(fruit);
+            const price = [2.44,3.44,5.21,1.99,2.32]
+            switch (fruit){
+                case "apple":
+                    // var amount = "$"+price[0];
+                    document.getElementById('price').innerHTML = "The price of " + fruit +" is " + "$"+price[0];
+                    break;
+                case "banana":
+                    // var amount = "$"+price[1];
+                    document.getElementById("price").innerHTML = "The price of " + fruit + " is " + "$"+price[1];
+                    break;
+                case "cherry":
+                    // var amount = "$3.11";
+                    document.getElementById("price").innerHTML = "The price of " + fruit + " is " + "$"+price[2];
+                    break;
+                case "mango":
+                    // var amount = "$2.32";
+                    document.getElementById("price").innerHTML = "The price of " + fruit + " is " + "$"+ price[3];
+                    break;
+                case "orange":
+                    // var amount = "$4.22";
+                    document.getElementById("price").innerHTML = "The price of " + fruit + " is " + "$" + price[4];
+                    break;
+                default:
+                    document.getElementById("price").innerHTML = "Sorry for the inconveniences " + fruit + "is currently not available";
+            }
+        }
+        let cities = ['Mumbai',"Dhaka","New York"];
+        var city = "";
+        for(let i=0;i<cities.length; i++){
+            city = cities[i];
+            document.getElementById('demo').innerHTML += "<li>" + city + "</li>";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <script>
+        var students = [
+            {name:"john",age:22},
+            {name:"Monica",age:33},
+            {name:"Paul",age:20}
+
+        ];
+        // students.sort((a,b)=>a.age-b.age);
+        for(let i=0;i<students.length;i++){
+            document.getElementById("demo").innerHTML += "<p> Name:" +students[i].name +"<br> Age:" +students[i].age + "</p>";
+        }
+        
+        
+    </script>
+</body>
+</html>
